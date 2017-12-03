@@ -13,11 +13,11 @@ It is believed that [a particularly favorable Billboard hot 100 singles](https:/
 # Alpha version
 Towards 2007, the OS is installed and booting completes. Mattia begins his studies in Statistics.
 
-First sources are successfully compiled: Mattia obtains a Bachelor's degree (2010) in Statistics at the University of Torino.
+First sources are successfully compiled: in 2010, Mattia obtains a Bachelor's degreein Statistics at the University of Torino.
 
 # Beta version
-Logs look good and no system crashes are registered up to this point. Mattia is thus admitted to the [Allievi Program](http://www.carloalberto.org/education/allievi/)
-of the [Collegio Carlo Alberto](http://www.carloalberto.org).
+Logs look good and no system crashes are registered up to this point.
+Mattia is admitted to the [Allievi Program](http://www.carloalberto.org/education/allievi/) of the [Collegio Carlo Alberto](http://www.carloalberto.org).
 
 From the Collegio, he receives an Allievo Diploma (2010) and a Master in Statistics and Applied Mathematics (2012).
 In 2012, he also receives a Master's degree in Statistics from the University of Torino.

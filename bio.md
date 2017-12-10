@@ -59,4 +59,4 @@ It appears that there are no conflicts, so Beckie approves it.
 The merge is successful: Beckie and Mattia get married in November 2017.
 
 # Current version
-Mattia is under active development. [Get in touch](/contacts/) if you are want to download the bleeding edge.
+Mattia is under active development. [Get in touch](/contacts/) if you want to download the bleeding edge.

@@ -13,7 +13,7 @@ It is believed that [a particularly favorable Billboard hot 100 singles](https:/
 # Alpha version
 Towards 2007, the OS is installed and booting completes. Mattia begins his studies in Statistics.
 
-First sources are successfully compiled: in 2010, Mattia obtains a Bachelor's degreein Statistics at the University of Torino.
+First sources are successfully compiled: in 2010, Mattia obtains a Bachelor's degree in Statistics at the University of Torino.
 
 # Beta version
 Logs look good and no system crashes are registered up to this point.
@@ -29,7 +29,7 @@ His new quest begins at [Carnegie Mellon University](https://www.cmu.edu) (Pitts
 # Programming languages
 In 2015, Beckie and Mattia meet.
 It's love.
-Coding standards are revised and the English becomes the primary programming language for the project.
+Coding standards are revised and English becomes the primary programming language for the project.
 
 # First official release
 During his stay in Pittsburgh, Mattia collects enough evidence to conclude that:

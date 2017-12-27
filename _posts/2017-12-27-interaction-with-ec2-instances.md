@@ -78,7 +78,6 @@ Frenetic calls to `ec2.get_instance_state('instance1_id')` will eventually yield
     'Code': 16,
     'Name': 'running'
 }
-
 ```
 
 *"Finally! Now I just need the instance public DNS to ssh into it!"*

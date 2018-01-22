@@ -137,18 +137,12 @@ Because I am lazy.
 The only parameters in all of the code that we discussed are the id of the instance you are interested in (in methods such as `start_instance`, `stop_instance`, `get_instance_state`, and `get_instance_public_dns`) and the AWS profile you are using.
 Throughout this example, I am using a profile named `mattia-admin`.
 
-`mattia-admin` is defined as follows in my `~/.aws/credentials` and `~/.aws/config` files.
+`mattia-admin` is defined as follows in my `~/.aws/credentials` file:
 
-- `credentials`:
 ```
 [mattia-admin]
 aws_secret_access_key = <my_aws_secret_access_key>
 aws_access_key_id = <my_secret_access_key>
-```
-
-- `config`
-```
-[mattia-admin]
 region = us-east-1
 output = json
 ```
@@ -168,7 +162,7 @@ ec2 = EC2()
 # equivalent to ec2 = EC2('default')
 ```
 
-assumes that you want to use your `default` AWS profile.
+assumes that you want to use your `default` AWS profile (and that you have one!).
 
 More functionality may be added in the future.
 But, really, all this is just further simplifying trivial operations that you can already perform using `boto3`.

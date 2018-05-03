@@ -2,7 +2,6 @@
 layout: post
 title: "Never as good as the first time"
 date: 2017-12-09 10:00:00 -0500
-categories: code
 permalink: /brews/:title
 ---
 

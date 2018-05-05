@@ -3,6 +3,7 @@ layout: post
 title: "A surprisingly uniform body of water"
 date: 2018-05-05 12:00:00 -0500
 permalink: /brews/:title
+mathjax: true
 ---
 
 Consider the following problem.

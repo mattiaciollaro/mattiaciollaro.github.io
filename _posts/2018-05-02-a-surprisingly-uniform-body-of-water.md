@@ -16,20 +16,20 @@ potentially very very big.
 The task is to draw a sample $$ S \subseteq \mathbb{S} $$ of size
 $$ k \ge 1 $$
 such that $$ P(X_i \in S) = \min (k / N, 1) $$
-for any $$ i \in \{1, \dots, N\} $$.
+for any $$ i \leq N $$.
 That is, the sampling scheme is such that every element of the stream
 has the same probability of being included in the sample.
 
-To be clear, here $$ k \ll N $$, and $$ N $$ could be so large that we
-cannot simply store all of the elements of $$ \mathbb{S} $$ in memory
-*first* and *then* perform the sampling once the stream ends.
+To be clear, $$ k \ll N $$ with high probability, and $$ N $$ could be so
+large that we cannot simply store all of the elements of $$ \mathbb{S} $$
+in memory *first* and *then* perform the sampling once the stream ends.
 He-he!
 
 Amazingly, there exists a statistimagical algorithm that allows us to
 draw such a sample.
-The problem is often referred to as *reservoir sampling*.
+The procedure is often referred to as *reservoir sampling*.
 
-Here is a viable strategy.
+Here is the basic strategy.
 
 We start by saving the first $$ k $$ elements of the
 stream $$ \mathbb{S} $$ in an array as they come.
@@ -44,7 +44,7 @@ $$ S = S^N $$.
   $$ k $$-th element, i.e. $$ N \le k $$, we simply end up sampling
   the whole stream:
   $$ S = \mathbb{S} $$ and $$ P(X_i \in S) = 1 $$
-  for all $$ i \in \{1, \dots, k\} $$.
+  for all $$ i \le k $$.
 
 - Otherwise, if $$ N > k $$, we proceed as follows:
 
@@ -54,36 +54,37 @@ $$ S = S^N $$.
 
     1. save $$ X_i $$, the $$ i $$-th element of the stream
 
-    2. randomly select one of the elements of $$ S^i $$
+    2. randomly select one of the elements of $$ S^{i - 1} $$
 
-    3. pop the randomly selected element out of $$ S^i $$
+    3. pop the randomly selected element out of $$ S^{i - 1} $$
 
-    4. fill the empty slot of $$ S^i $$ with $$ X_i $$
+    4. fill the empty slot of $$ S^{i - 1} $$ with $$ X_i $$
 
-    5. this modified version of $$ S^i $$ becomes $$ S^{i+1} $$.
+    5. this modified version of $$ S^{i - 1} $$ becomes $$ S^i $$.
 
   - with probability $$ 1 - k / i $$, ignore $$ X_i $$ and
-    set $$ S^{i + 1} = S^i $$.
+    set $$ S^i = S^{i - 1} $$.
 
-To convince ourselves that this actually generates a sample such that
-$$ P(X_i \in S) = \min (k / N, 1) $$ for $$ i \in \{1, \dots, N\} $$,
-it is enough to use an induction argument.
+To convince ourselves that this strategy indeed generates a sample such that
+$$ P(X_i \in S) = \min (k / N, 1) $$ for all $$ i \le N $$, regardless of
+the value of $$ N $$, it is enough to use an induction argument.
   
-Let's start by considering iteration $$ k + 1 $$: at this stage,
-the probability that $$ X_j $$ for $$ j \le k $$ is retained in 
-$$ S^{k+1} $$ is the probability of the event "$$ X_{k + 1} $$ is
-discarded or $$ X_{k+1} $$ is selected but $$ X_j $$ is not popped out":
+Let's start by considering iteration $$ k + 1 $$: 
+
+- $$ P(X_{k+1} \in S^{k+1}) = k / (k + 1) $$ by design.
+
+- At iteration $$ k + 1 $$, the probability that, for $$ j \le k $$,
+$$ X_j $$ is retained in $$ S^{k+1} $$ is the probability of the event
+"$$ X_{k + 1} $$ is discarded or $$ X_{k+1} $$ is selected but $$ X_j $$
+is not popped out":
 
 $$
 \begin{align}
-P(X \in S^{k+1}) & = \\
-& = 1 - \frac{k}{k + 1} + \frac{k}{k + 1}\frac{k-1}{k} \\
+P(X_j \in S^{k+1}) & = 1 - \frac{k}{k + 1} + \frac{k}{k + 1}\frac{k-1}{k} \\
 & = \frac{1}{k + 1} + \frac{k-1}{k+1} \\
 & = \frac{k}{k+1}.
 \end{align}
 $$
-
-Of course, $$ P(X_{k+1} \in S^{k+1}) = k / (k + 1) $$ by design.
 
 Now, let's assume that the above also holds for a generic
 $$ j > k + 1 $$, i.e. $$ P(X_i \in S^j) = k / j $$ for every
@@ -99,7 +100,7 @@ Then, for $$ j + 1 $$, we have that
   & P(X_i \in S^{j + 1}) = \\
   & = P(X_i \in S^j) \left(
   P(X_{j+1} \text{ is discarded }) +
-  P(X_i \text{ is not swapped with } X_{j+1} \mid X_i \in S^j)
+  P(X_i \text{ is not replaced with } X_{j+1} \mid X_i \in S^j)
   \right) \\
   & = \frac{k}{j}\left(
   1 - \frac{k}{j + 1} + 
@@ -116,3 +117,6 @@ Then, for $$ j + 1 $$, we have that
 
 [Here](https://github.com/mattiaciollaro/reservoir) you can find a
 Python 3 implementation of this procedure.
+
+Special thanks to [@Matteozio](https://github.com/Matteozio) for his
+suggestions and edits!

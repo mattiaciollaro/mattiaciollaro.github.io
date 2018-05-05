@@ -7,8 +7,8 @@ permalink: /brews/:title
 
 Consider the following problem.
 
-We have a stream of incoming data \$$\mathbb{S} = X_1, X_2, \dots, X_N$$.
-\$$N$$ is *not* known in advance (i.e. \$$N$$ is random) and is
+We have a stream of incoming data \$$ \mathbb{S} = X_1, X_2, \dots, X_N $$.
+\$$ N $$ is *not* known in advance (i.e. \$$ N $$ is random) and is
 potentially very very big.
 
 The task is to draw a sample $S \subseteq \mathbb{S}$ of size $k \ge 1$

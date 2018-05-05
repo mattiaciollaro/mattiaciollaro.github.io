@@ -3,14 +3,13 @@ layout: post
 title: "A surprisingly uniform body of water"
 date: 2018-05-05 12:00:00 -0500
 permalink: /brews/:title
-mathjax: true
 ---
 
 Consider the following problem.
 
-We have a stream of incoming data $\mathbb{S} = X_1, X_2, \dots, X_N$.
-$N$ is *not* known in advance (i.e. $N$ is random) and is potentially
-very very big.
+We have a stream of incoming data \$$\mathbb{S} = X_1, X_2, \dots, X_N$$.
+\$$N$$ is *not* known in advance (i.e. \$$N$$ is random) and is
+potentially very very big.
 
 The task is to draw a sample $S \subseteq \mathbb{S}$ of size $k \ge 1$
 such that $P(X_i \in S) = \min (k / N, 1)$

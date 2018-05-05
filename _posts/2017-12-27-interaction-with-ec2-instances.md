@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "(Trivial) Interaction with EC2 instances"
-date: 2017-12-27 12:00:00 -0500
+date: 2017-12-27
 permalink: /brews/:title
 ---
 

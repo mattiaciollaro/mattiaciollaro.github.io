@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hello world: introducing Mattia's virtual distillery"
-date: 2017-12-02 00:00:00 -0500
+date: 2017-12-02
 permalink: /brews/:title
 ---
 

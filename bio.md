@@ -56,7 +56,7 @@ At Spreemo, his focus is on the estimation of error rates in diagnostic MRI exam
 # Major upgrades
 Mattia issues a pull request to Beckie.
 It appears that there are no conflicts, so Beckie approves it.
-The merge is successful: Beckie and Mattia get married in November 2017.
+The merge is successful: Beckie and Mattia get married in November 2017 (and then again in June 2018!).
 
 # Current version
 Mattia is under active development. [Get in touch](/contacts/) if you want to download the bleeding edge.

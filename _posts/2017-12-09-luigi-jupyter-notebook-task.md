@@ -11,5 +11,6 @@ science pipelines.
 
 I also introduced the `JupyterNotebookTask` class that I wrote to run Jupyter
 notebooks as Luigi tasks.
-Checkout [this](https://intoli.com/blog/luigi-jupyter-notebooks/) and
+
+Check out [this](https://intoli.com/blog/luigi-jupyter-notebooks/) and
 [this](https://github.com/mattiaciollaro/luigi_tutorial).
